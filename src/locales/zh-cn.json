@@ -83,7 +83,7 @@
   "shuangpin-sougou": "搜狗双拼",
   "shuangpin-xiaohe": "小鹤双拼",
   "start": "开始游戏",
-  "random-start": "随机题目",
+  "random-start": "刷新成语",
   "next-start": "再玩一题",
   "strict-mode": "严格模式",
   "time-format": "{0}时{1}分{2}秒",
@@ -101,5 +101,5 @@
   "win-rate": "胜率",
   "zhuyin": "注音",
   "ziyin": "字音",
-  "now-num": "当前题目编号:"
+  "now-num": "当前成语编号:"
 }
