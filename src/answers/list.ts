@@ -2116,9 +2116,6 @@ export const answers: string[][] = [
   ..._OTHER_DATA,
 ]
 
-// eslint-disable-next-line no-console
-console.log(answers.length)
-
 // duplicated check
 if (import.meta.hot) {
   const { checkValidIdiom } = await import('../logic')
