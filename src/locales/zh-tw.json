@@ -83,7 +83,8 @@
   "shuangpin-sougou": "搜狗雙拼",
   "shuangpin-xiaohe": "小鶴雙拼",
   "start": "開始遊戲",
-  "random-start": "隨機再玩",
+  "random-start": "隨機題目",
+  "next-start": "再玩一題",
   "strict-mode": "嚴格模式",
   "time-format": "{0}時{1}分{2}秒",
   "tone-number": "數字聲調",
@@ -99,5 +100,6 @@
   "win-no-hint-count": "無提示",
   "win-rate": "勝率",
   "zhuyin": "注音",
-  "ziyin": "字音"
+  "ziyin": "字音",
+  "now-num": "當前題目編號:"
 }

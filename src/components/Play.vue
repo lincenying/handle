@@ -130,6 +130,9 @@ watchEffect(() => {
           <div v-if="tries.length > 4 && !isFailed" op50>
             {{ t('tries-rest', TRIES_LIMIT - tries.length) }}
           </div>
+          <div v-else op50>
+            {{ t('now-num') }}{{ dayNo }}
+          </div>
           <button v-if="isFailed" square-btn @click="showFailed = true">
             <div i-mdi-emoticon-devil-outline /> {{ t('view-answer') }}
           </button>

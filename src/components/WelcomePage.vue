@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { isDark, showHelp, showVariants, useMask } from '~/state'
+import { Random, dayNo, isDark, showHelp, showVariants, useMask } from '~/state'
 import { initialized, inputMode } from '~/storage'
 import { t } from '~/i18n'
 
@@ -7,6 +7,12 @@ function start() {
   showHelp.value = false
   useMask.value = false
   initialized.value = true
+}
+
+function next() {
+  const day = Random(1, 2000)
+  dayNo.value = day
+  start()
 }
 
 function variantButton() {
@@ -64,9 +70,9 @@ const final = computed(() => ({ py: 'uo', zy: 'ㄨㄛ', sp: 'o' }[inputMode.valu
       <button btn p="x4 y2" @click="start()">
         <span tracking-1 pl1>{{ t('start') }}</span>
       </button>
-      <!-- <button btn p="x4 y2" @click="randomStart()">
+      <button btn p="x4 y2" @click="next()">
         <span tracking-1 pl1>{{ t('random-start') }}</span>
-      </button> -->
+      </button>
     </div>
     <div op50>
       {{ t('update-tip') }}
@@ -88,10 +94,18 @@ const final = computed(() => ({ py: 'uo', zy: 'ㄨㄛ', sp: 'o' }[inputMode.valu
       <a op50 hover:op80 href="https://twitter.com/antfu7" target="_blank">Anthony</a>
       <span op40> & </span>
       <a op50 hover:op80 href="https://twitter.com/iiiiiiines_____" target="_blank">Inès</a>
+      <span op40>, modify by </span>
+      <a op50 hover:op80 href="https://github.com/lincenying" target="_blank">LinCenYing</a>
     </div>
-    <a href="https://github.com/antfu/handle" target="_blank" flex="~ center gap-1" op50 hover:op80>
-      <div i-carbon-logo-github />
-      Source Code
-    </a>
+    <div flex gap-2>
+      <a href="https://github.com/antfu/handle" target="_blank" flex="~ center gap-1" op50 hover:op80>
+        <div i-carbon-logo-github />
+        原始代码
+      </a>
+      <a href="https://github.com/lincenying/handle" target="_blank" flex="~ center gap-1" op50 hover:op80>
+        <div i-carbon-logo-github />
+        修改后代码
+      </a>
+    </div>
   </div>
 </template>

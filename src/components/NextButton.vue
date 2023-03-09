@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Random } from '~/state'
+import { Random, dayNo } from '~/state'
 import { t } from '~/i18n'
 
 function next() {
-  const day = Random(1, 9999)
-  window.location.href = `?d=${day}`
+  const day = Random(1, 2000)
+  dayNo.value = day
 }
 </script>
 
@@ -14,6 +14,6 @@ function next() {
     p="x3 y1"
     @click="next()"
   >
-    {{ t('random-start') }}
+    {{ t('next-start') }}
   </button>
 </template>
