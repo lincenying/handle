@@ -47,6 +47,12 @@ export const answer = computed(() =>
     : getAnswerOfDay(dayNo.value),
 )
 
+export const Random = (lower: number, upper: number) => {
+  lower = +lower || 0
+  upper = +upper || 0
+  return parseInt(`${Math.random() * (upper - lower) + lower}`, 10)
+}
+
 export const hint = computed(() => answer.value.hint)
 export const parsedAnswer = computed(() => parseWord(answer.value.word))
 

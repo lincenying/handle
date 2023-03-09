@@ -20,6 +20,7 @@ declare module '@vue/runtime-core' {
     Modal: typeof import('./src/components/Modal.vue')['default']
     ModalsLayer: typeof import('./src/components/ModalsLayer.vue')['default']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
+    NextButton: typeof import('./src/components/NextButton.vue')['default']
     NoFuturePlay: typeof import('./src/components/NoFuturePlay.vue')['default']
     NoPastPlay: typeof import('./src/components/NoPastPlay.vue')['default']
     NoQuizToday: typeof import('./src/components/NoQuizToday.vue')['default']

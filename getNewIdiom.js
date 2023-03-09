@@ -1,57 +1,6 @@
-/**
- * SPOILERS
- *
- * This file contains the list of answers for the game. It's not recommended to continue reading this file.
- *
- * 剧透警告
- *
- * 该文件包含了游戏的答案列表。不建议继续阅读。
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
+import fs from 'node:fs'
 
-import { seedShuffle } from './utils'
-
-function prepare<T>(len: number, arr: T[]) {
-  if (import.meta.hot && arr.length !== len)
-    throw new Error(`expect array length ${arr.length} to be ${len}`)
-  return arr
-}
-
-export const _PRE = prepare(1, [[]])
-
-export const _2022_JAN = prepare(31, [
+export const _2022_JAN = [
   ['路不拾遗', '遗'],
   ['恬不知耻', '恬'],
   ['货真价实', '货'],
@@ -84,42 +33,40 @@ export const _2022_JAN = prepare(31, [
   ['天南海北'],
   ['地动山摇'],
   ['福寿安康'],
-])
+]
 
-export const _2022_FEB = prepare(28, [
+export const _2022_FEB = [
   ['虎虎生威', '虎'],
   ['酒虎诗龙', '虎'],
   ['虎啸风生', '虎'],
   ['卧虎藏龙', '虎'],
   ['虎视眈眈', '虎'],
-  ...seedShuffle([
-    ['春华秋实'],
-    ['一面之辞'],
-    ['变化莫测'],
-    ['穷山恶水'],
-    ['百废待兴'],
-    ['百年树人', '人'],
-    ['吃里扒外'],
-    ['井然有条'],
-    ['本性难移'],
-    ['口是心非', '是'],
-    ['雄心勃勃'],
-    ['各有千秋'],
-    ['异口同声', '声'],
-    ['因噎废食', '食'],
-    ['惊世骇俗', '世'],
-    ['同甘共苦', '同'],
-    ['见风使舵'],
-    ['地北天南'],
-    ['锦上添花', '花'],
-    ['应对如流'],
-    ['入木三分', '木'],
-    ['瓜田李下', '下'],
-    ['语不投机'],
-  ], '2022-02'),
-])
+  ['春华秋实'],
+  ['一面之辞'],
+  ['变化莫测'],
+  ['穷山恶水'],
+  ['百废待兴'],
+  ['百年树人', '人'],
+  ['吃里扒外'],
+  ['井然有条'],
+  ['本性难移'],
+  ['口是心非', '是'],
+  ['雄心勃勃'],
+  ['各有千秋'],
+  ['异口同声', '声'],
+  ['因噎废食', '食'],
+  ['惊世骇俗', '世'],
+  ['同甘共苦', '同'],
+  ['见风使舵'],
+  ['地北天南'],
+  ['锦上添花', '花'],
+  ['应对如流'],
+  ['入木三分', '木'],
+  ['瓜田李下', '下'],
+  ['语不投机'],
+]
 
-export const _2022_MARCH = prepare(31, seedShuffle([
+export const _2022_MARCH = [
   ['孜孜不倦', '不'],
   ['胆战心惊', '心'],
   ['人老珠黄', '黄'],
@@ -151,9 +98,9 @@ export const _2022_MARCH = prepare(31, seedShuffle([
   ['风调雨顺', '雨'],
   ['坐吃山空', '山'],
   ['愤世嫉俗', '世'],
-], '2022-03'))
+]
 
-export const _2022_APRIL = prepare(30, seedShuffle([
+export const _2022_APRIL = [
   ['破釜沉舟', '破'],
   ['急转直下', '下'],
   ['独具匠心', '心'],
@@ -184,9 +131,9 @@ export const _2022_APRIL = prepare(30, seedShuffle([
   ['未雨绸缪', '雨'],
   ['居安思危', '安'],
   ['百里挑一', '百'], // D100
-], '2022-04'))
+]
 
-export const _2022_MAY = prepare(31, seedShuffle([
+export const _2022_MAY = [
   ['昙花一现', '现'],
   ['雪中送炭', '中'],
   ['成王败寇', '成'],
@@ -218,9 +165,9 @@ export const _2022_MAY = prepare(31, seedShuffle([
   ['口耳相传', '口'],
   ['光阴似箭', '似'],
   ['飞来横祸', '来'],
-], '2022-05'))
+]
 
-export const _2022_JUNE = prepare(30, seedShuffle([
+export const _2022_JUNE = [
   ['雾里看花', '里'],
   ['否极泰来', '来'],
   ['鼠目寸光', '目'],
@@ -251,9 +198,9 @@ export const _2022_JUNE = prepare(30, seedShuffle([
   ['败兴而归', '兴'],
   ['举手之劳', '手'],
   ['和蔼可亲', '可'],
-], '2022-06'))
+]
 
-export const _2022_JULY = prepare(31, seedShuffle([
+export const _2022_JULY = [
   ['鳏寡孤独', '独'],
   ['金蝉脱壳', '金'],
   ['做贼心虚', '心'],
@@ -285,9 +232,9 @@ export const _2022_JULY = prepare(31, seedShuffle([
   ['水涨船高', '水'],
   ['藕断丝连', '丝'],
   ['张牙舞爪', '牙'],
-], '2022-07'))
+]
 
-export const _2022_AUG = prepare(31, seedShuffle([
+export const _2022_AUG = [
   ['暴殄天物', '天'],
   ['含辛茹苦', '苦'],
   ['差强人意', '人'],
@@ -319,9 +266,9 @@ export const _2022_AUG = prepare(31, seedShuffle([
   ['颠倒是非', '是'],
   ['鱼目混珠', '目'],
   ['八仙过海', '过'],
-], '2022-08'))
+]
 
-export const _2022_SEP = prepare(30, seedShuffle([
+export const _2022_SEP = [
   ['纷纷扰扰', '扰'],
   ['层出不穷', '不'],
   ['出其不意', '出'],
@@ -352,9 +299,9 @@ export const _2022_SEP = prepare(30, seedShuffle([
   ['不由自主', '自'],
   ['隔墙有耳', '有'],
   ['闻所未闻', '未'],
-], '2022-09'))
+]
 
-export const _2022_OCT = prepare(31, seedShuffle([
+export const _2022_OCT = [
   ['财运亨通', '亨'],
   ['胡思乱想', '思'],
   ['神乎其技', '其'],
@@ -386,9 +333,9 @@ export const _2022_OCT = prepare(31, seedShuffle([
   ['唯命是从', '是'],
   ['根深蒂固', '根'],
   ['死而后已', '已'],
-], '2022-10'))
+]
 
-export const _2022_NOV = prepare(30, seedShuffle([
+export const _2022_NOV = [
   ['逢场作戏', '戏'],
   ['花开富贵', '贵'],
   ['浅尝辄止', '尝'],
@@ -419,9 +366,9 @@ export const _2022_NOV = prepare(30, seedShuffle([
   ['刻不容缓', '缓'],
   ['闭月羞花', '闭'],
   ['人面兽心', '面'],
-], '2022-11'))
+]
 
-export const _2022_DEC = prepare(31, seedShuffle([
+export const _2022_DEC = [
   ['感人肺腑', '人'],
   ['求之不得', '得'],
   ['左顾右盼', '左'],
@@ -453,9 +400,9 @@ export const _2022_DEC = prepare(31, seedShuffle([
   ['呆若木鸡', '呆'],
   ['装疯卖傻', '装'],
   ['山高水长', '山'],
-], '2022-12'))
+]
 
-export const _2023_JAN = prepare(31, seedShuffle([
+export const _2023_JAN = [
   ['后羿射日', '羿'],
   ['旁门左道', '道'],
   ['入不敷出', '不'],
@@ -487,9 +434,9 @@ export const _2023_JAN = prepare(31, seedShuffle([
   ['无声无息', '息'],
   ['惟妙惟肖', '妙'],
   ['英姿飒爽', '飒'],
-], '2023-01'))
+]
 
-export const _2023_FEB = prepare(28, seedShuffle([
+export const _2023_FEB = [
   ['举棋不定', '举'],
   ['江河日下', '日'],
   ['建功立业', '建'],
@@ -518,9 +465,9 @@ export const _2023_FEB = prepare(28, seedShuffle([
   ['言行不一', '一'],
   ['双喜临门', '喜'],
   ['滔滔不绝', '不'],
-], '2023-02'))
+]
 
-export const _OTHER_DATA = seedShuffle([
+const _OTHER_DATA = [
   ['云尤雨殢', '雨'],
   ['黜昏启圣', '启'],
   ['咒天骂地', '地'],
@@ -999,10 +946,9 @@ export const _OTHER_DATA = seedShuffle([
   ['额手称颂', '称'],
   ['栋梁之才', '之'],
   ['教无常师', '常'],
-])
+]
 
-export const answers: string[][] = [
-  ..._PRE,
+const answers = [
   ..._2022_JAN,
   ..._2022_FEB,
   ..._2022_MARCH,
@@ -1020,20 +966,35 @@ export const answers: string[][] = [
   ..._OTHER_DATA,
 ]
 
-// duplicated check
-if (import.meta.hot) {
-  const { checkValidIdiom } = await import('../logic')
-  const map = new Map<string, number>()
-  answers.forEach((a, i) => {
-    if (!a[0])
-      return
-    if (!map.has(a[0]))
-      map.set(a[0], i)
-    else
-      throw new Error(`Word ${a[0]} is duplicated at ${map.get(a[0])}`)
-    if (a[1] && !a[0].includes(a[1]))
-      throw new Error(`Hint ${a[1]} is not included in ${a[0]}`)
-    if (!checkValidIdiom(a[0], true))
-      throw new Error(`${a[0]} is not a valid idiom`)
-  })
+const Random = (lower, upper) => {
+  lower = +lower || 0
+  upper = +upper || 0
+  return parseInt(`${Math.random() * (upper - lower) + lower}`, 10)
 }
+
+const get = (num) => {
+  const data1 = fs.readFileSync('./src/data/idioms.txt', 'utf-8')
+  const json1 = data1.split('\n')
+
+  const tmpArr = []
+  for (let i = 0; i < num; i++) {
+    const idiom = json1[Random(1, json1.length)]
+    const tip = idiom[Random(1, 4)]
+    const index = [...answers, ...tmpArr].findIndex(item => item[0] === idiom)
+    if (index === -1)
+      tmpArr.push([idiom, tip])
+  }
+
+  return tmpArr
+
+  // json1.outfits = json1.outfits.sort(function (a, b) {
+  //     const c1 = pinyin(a.name).join('')
+  //     const c2 = pinyin(b.name).join('')
+  //     return c1.localeCompare(c2)
+  // })
+  // const text1 = JSON.stringify(json1, null, '\t')
+  // node.fs.writeFileSync('./OutfitSystemData_sort.json', text1)
+}
+
+// eslint-disable-next-line no-console
+console.log(JSON.stringify(get(500)))

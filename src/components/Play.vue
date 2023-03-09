@@ -117,14 +117,16 @@ watchEffect(() => {
               </span>
             </div>
           </div>
-          <button
-            mt3
-            btn p="x6 y2"
-            :disabled="input.length !== WORD_LENGTH"
-            @click="enter"
-          >
-            {{ t('ok-spaced') }}
-          </button>
+          <div flex gap2>
+            <button
+              mt3
+              btn p="x6 y2"
+              :disabled="input.length !== WORD_LENGTH"
+              @click="enter"
+            >
+              {{ t('ok-spaced') }}
+            </button>
+          </div>
           <div v-if="tries.length > 4 && !isFailed" op50>
             {{ t('tries-rest', TRIES_LIMIT - tries.length) }}
           </div>
