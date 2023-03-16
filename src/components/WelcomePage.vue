@@ -10,7 +10,7 @@ function start() {
 }
 
 function next() {
-  const day = Random(1, 2000)
+  const day = Random(1, 1509)
   dayNo.value = day
   start()
 }
